@@ -309,3 +309,6 @@ img {
 .nav-dropdown:focus-within .dropdown-content {
   display: block;
 }
+.section-actions {
+  margin-top: 24px;
+}
