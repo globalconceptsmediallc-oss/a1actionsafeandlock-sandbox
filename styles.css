@@ -1,124 +1,129 @@
-/* ===== HERO ===== */
-
-.hero {
-  position: relative;
-  overflow: hidden;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-    url('/images/keys-hero.jpg') center/cover no-repeat;
-  color: #fff;
-  padding: 0;
-  min-height: 520px;
-  display: flex;
-  align-items: center;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.62) 0%,
-    rgba(0, 0, 0, 0.42) 42%,
-    rgba(0, 0, 0, 0.18) 100%
-  );
-  pointer-events: none;
-}
-
-.hero-grid {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.55fr);
-  gap: 32px;
-  align-items: center;
-  width: 100%;
-  padding: 92px 0 92px;
-}
-
-.hero-copy h1 {
-  font-size: clamp(2.6rem, 5vw, 4.25rem);
-  line-height: 1.02;
-  margin: 0 0 14px;
-  letter-spacing: -0.03em;
-  color: #f2c21a;
-}
-
-.hero-copy p {
-  font-size: 1.08rem;
-  color: rgba(255, 255, 255, 0.94);
-  max-width: 60ch;
-  margin: 0 0 22px;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 18px;
-}
-
-.phone-number {
-  font-size: 1.45rem;
-  font-weight: 800;
-  margin-bottom: 14px;
-  letter-spacing: 0.01em;
-  color: #fff;
-}
-
-.trust-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 14px;
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.hero-card {
-  background: rgba(0, 0, 0, 0.34);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 26px;
-  backdrop-filter: blur(4px);
-}
-
-.hero-card h2,
-.hero-card h3 {
-  margin-top: 0;
-  margin-bottom: 12px;
-  font-size: 1.2rem;
-  color: #f2c21a;
-}
-
-.hero-card p,
-.hero-card li {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.hero-card ul {
+/* ===== GLOBAL RESET ===== */
+* {
+  box-sizing: border-box;
   margin: 0;
-  padding-left: 18px;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #111;
+  background: #fff;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+  background: #111;
+  color: #fff;
+  padding: 16px 0;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-nav a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-call {
+  background: #d62828;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* ===== HERO ===== */
+.hero-visual {
+  background: #222;
+  color: #fff;
+  padding: 80px 0;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-cta {
+  display: inline-block;
+  margin-top: 15px;
+  background: #d62828;
+  color: #fff;
+  padding: 12px 18px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 60px 0;
+}
+
+.section-alt {
+  background: #f5f5f5;
+}
+
+/* ===== CARDS ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+/* ===== BUTTON ===== */
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
 }
 
 .button-primary {
   background: #d62828;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background: #111;
   color: #fff;
-  box-shadow: var(--shadow);
-}
-
-.button-primary:hover {
-  background: #b71f1f;
-  transform: translateY(-2px);
-}
-
-.button-secondary {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.button-secondary:hover {
-  background: rgba(255, 255, 255, 0.18);
+  text-align: center;
+  padding: 30px 0;
 }
