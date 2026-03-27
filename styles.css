@@ -344,3 +344,19 @@ img {
     gap: 24px;
   }
 }
+.footer-social {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.footer-social a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  text-decoration: underline;
+}
