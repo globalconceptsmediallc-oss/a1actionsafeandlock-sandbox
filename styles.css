@@ -312,3 +312,35 @@ img {
 .section-actions {
   margin-top: 24px;
 }
+
+/* === CITY PAGE TOP SECTION === */
+
+.city-hero-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.city-hero-copy h1 {
+  margin-bottom: 12px;
+}
+
+.city-hero-copy .section-intro {
+  max-width: 760px;
+}
+
+.city-hero-card {
+  padding: 28px;
+}
+
+.city-hero-card h2 {
+  margin-bottom: 14px;
+}
+
+@media (max-width: 900px) {
+  .city-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
