@@ -626,74 +626,40 @@ section,
   }
 }
 
-@media (max-width: 768px) {
-  section,
-  .section {
-    padding: 48px 0;
-  }
-
-  .hero-visual,
-  .hero {
-    padding: 56px 0;
-  }
-
-  .hero-content,
-  .hero-grid {
+@media (max-width: 900px) {
+  .city-hero-grid,
+  .cta-contact-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 
-  .hero-content {
-    text-align: center;
+  .contact-point-row {
+    grid-template-columns: 1fr;
   }
 
-  .hero-left,
-  .hero-right {
-    max-width: 100%;
+  .cta-contact-card {
+    position: static;
+    top: auto;
   }
+}
 
-  .hero-actions,
+@media (max-width: 768px) {
   .cta-contact-actions {
-    justify-content: center;
     gap: 10px;
+    justify-content: flex-start;
   }
 
-  .site-header .container {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .site-nav {
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .site-nav a {
-    font-size: 0.88rem;
-  }
-
-  .dropdown-content {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .card,
-  .hero-card,
   .contact-point,
+  .contact-point-primary,
   .cta-contact-card {
     padding: 18px;
   }
 
-  .section-intro {
-    margin-bottom: 1.5rem;
+  .cta-contact-map {
+    margin-top: 28px;
   }
 
   .cta-contact-map iframe {
     min-height: 280px;
-  }
-
-  .footer-links,
-  .footer-social {
-    gap: 10px 14px;
   }
 }
