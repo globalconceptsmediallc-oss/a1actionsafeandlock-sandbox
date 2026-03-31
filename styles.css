@@ -681,6 +681,148 @@ section,
   margin-top: 2rem;
 }
 
+/* ===== MELBOURNE PAGE REFINEMENTS ===== */
+.hero-copy {
+  max-width: 700px;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0.85rem;
+}
+
+.hero-copy p:last-of-type {
+  max-width: 640px;
+  margin-bottom: 0;
+}
+
+.hero-card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 12px;
+  border: 1px solid #e7e1d8;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.hero-card h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.hero-card p:last-child {
+  margin-bottom: 0;
+}
+
+.section-heading {
+  margin-bottom: 1.5rem;
+}
+
+.section-heading h2 {
+  margin-bottom: 0.6rem;
+}
+
+.section .cards {
+  margin-top: 1.5rem;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid #e4ddd3;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.card .button,
+.card .button-primary,
+.card .button-secondary {
+  margin-top: 0.5rem;
+}
+
+.section-alt .section-heading,
+.section-alt .section-intro {
+  max-width: 760px;
+}
+
+/* ===== WHY CUSTOMERS CALL US PANEL ===== */
+.contact-highlight {
+  background: #111;
+  color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.contact-highlight h3 {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.contact-highlight p,
+.contact-highlight li {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.contact-checklist {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.contact-checklist li {
+  margin-bottom: 0.65rem;
+}
+
+.contact-links {
+  display: grid;
+  gap: 8px;
+  margin-top: 1.1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.contact-links a {
+  color: #f2c230;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.contact-links a:hover {
+  color: #ffd95a;
+  text-decoration: underline;
+}
+
+/* ===== SERVICE AREA SECTION TIGHTENING ===== */
+.nearby-service-area-grid {
+  margin-top: 1.5rem;
+}
+
+.service-area-card {
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.section-cta {
+  margin-top: 1.5rem;
+}
+
+/* ===== SECTION RHYTHM REFINEMENT ===== */
+.hero + .section,
+.hero + .section-alt,
+.hero + [data-include] {
+  padding-top: 56px;
+}
+
+.section + .section,
+.section + .section-alt,
+.section-alt + .section,
+.section-alt + .section-alt {
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .city-hero-grid,
