@@ -880,3 +880,169 @@ section,
     grid-template-columns: 1fr;
   }
 }
+/* ===== GLOBAL SECTION RHYTHM ===== */
+
+section,
+.section {
+  padding: 56px 0;
+}
+
+.hero,
+.hero-visual {
+  padding: 64px 0;
+}
+
+.section-heading {
+  margin-bottom: 1.5rem;
+}
+
+.section-heading h2,
+.cta-contact-copy h2,
+.city-hero-copy h1,
+.hero-copy h1,
+.hero-left h1 {
+  margin-bottom: 0.65rem;
+}
+
+.section-intro,
+.cta-contact-copy .section-intro,
+.city-hero-copy .section-intro {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  max-width: 760px;
+}
+
+.section-actions,
+.section-cta,
+.cta-contact-actions,
+.hero-actions {
+  margin-top: 1.5rem;
+}
+
+/* ===== CARD / GRID RHYTHM ===== */
+
+.cards,
+.service-area-teaser-grid,
+.nearby-service-area-grid,
+.cta-contact-points {
+  margin-top: 1.5rem;
+}
+
+.cards,
+.service-area-teaser-grid,
+.nearby-service-area-grid {
+  gap: 20px;
+}
+
+.card,
+.service-area-card,
+.contact-point,
+.contact-point-primary,
+.hero-card,
+.city-hero-card {
+  border-radius: 12px;
+}
+
+/* ===== CONTENT SPACING INSIDE CARDS ===== */
+
+.card h3,
+.service-area-card h3,
+.contact-point h3,
+.contact-point-primary h3,
+.hero-card h2,
+.city-hero-card h2,
+.cta-contact-card h3 {
+  margin-bottom: 0.65rem;
+}
+
+.card p:last-child,
+.service-area-card p:last-child,
+.contact-point p:last-child,
+.contact-point-primary p:last-child,
+.hero-card p:last-child,
+.city-hero-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== SECTION TRANSITIONS ===== */
+
+.hero + .section,
+.hero + .section-alt,
+.hero + [data-include],
+.hero-visual + .section,
+.hero-visual + .section-alt,
+.hero-visual + [data-include] {
+  padding-top: 48px;
+}
+
+.section + .section,
+.section + .section-alt,
+.section-alt + .section,
+.section-alt + .section-alt {
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* ===== CTA CONTACT TIGHTENING ===== */
+
+.cta-contact-copy .section-intro {
+  margin-bottom: 1.25rem;
+}
+
+.cta-contact-points {
+  gap: 12px;
+}
+
+.cta-contact-actions {
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.cta-contact-map {
+  margin-top: 24px;
+}
+
+/* ===== MOBILE RHYTHM ===== */
+
+@media (max-width: 768px) {
+  section,
+  .section {
+    padding: 48px 0;
+  }
+
+  .hero,
+  .hero-visual {
+    padding: 52px 0;
+  }
+
+  .section-heading,
+  .section-intro,
+  .cta-contact-copy .section-intro,
+  .section-actions,
+  .section-cta,
+  .hero-actions,
+  .cta-contact-actions,
+  .cards,
+  .service-area-teaser-grid,
+  .nearby-service-area-grid,
+  .cta-contact-map {
+    margin-top: 1.25rem;
+    margin-bottom: 0;
+  }
+
+  .cards,
+  .service-area-teaser-grid,
+  .nearby-service-area-grid,
+  .cta-contact-points {
+    gap: 16px;
+  }
+
+  .card,
+  .service-area-card,
+  .contact-point,
+  .contact-point-primary,
+  .cta-contact-card,
+  .hero-card,
+  .city-hero-card {
+    padding: 18px;
+  }
+}
