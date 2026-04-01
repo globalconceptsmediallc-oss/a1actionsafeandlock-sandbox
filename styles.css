@@ -51,28 +51,12 @@ a:hover {
   padding: 0 20px;
 }
 
-section,
-.section {
-  padding: 64px 0;
-}
-
 .section {
   background: #fff;
 }
 
 .section-alt {
   background: #f7f4ee;
-}
-
-.section-intro {
-  color: #555;
-  max-width: 760px;
-  margin-top: 0.5rem;
-  margin-bottom: 2rem;
-}
-
-.section-actions {
-  margin-top: 24px;
 }
 
 /* ===== HEADER ===== */
@@ -192,7 +176,6 @@ section,
 .hero-visual {
   background: linear-gradient(135deg, #1f1f1f, #2b2b2b);
   color: #fff;
-  padding: 72px 0;
 }
 
 .hero-content {
@@ -204,11 +187,6 @@ section,
 
 .hero-left {
   max-width: 620px;
-}
-
-.hero-left h1 {
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  margin-bottom: 12px;
 }
 
 .hero-sub {
@@ -226,7 +204,6 @@ section,
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 1.5rem;
 }
 
 .hero-right {
@@ -240,8 +217,6 @@ section,
 }
 
 /* ===== BUTTONS ===== */
-
-/* BASE BUTTON (used everywhere) */
 .button {
   display: inline-block;
   padding: 12px 18px;
@@ -260,7 +235,6 @@ section,
   text-decoration: none;
 }
 
-/* PRIMARY BUTTON (RED CTA) */
 .button.button-primary {
   background: #c62828;
   color: #fff;
@@ -271,7 +245,6 @@ section,
   color: #fff;
 }
 
-/* SECONDARY BUTTON (YELLOW) */
 .button.button-secondary {
   background: #f2c230;
   color: #111;
@@ -282,27 +255,17 @@ section,
   color: #111;
 }
 
-/* HERO CTA (kept separate for flexibility if needed later) */
-.hero-cta {
-  display: inline-block;
-  padding: 12px 18px;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  background: #c62828;
-  color: #fff;
+.hero-visual a:not(.button):not(.button-primary):not(.button-secondary) {
+  color: #f2c230;
 }
 
-.hero-cta:hover {
-  background: #a61f1f;
-  color: #fff;
+.hero-visual a:not(.button):not(.button-primary):not(.button-secondary):hover {
+  color: #ffd95a;
 }
 
 /* ===== HERO (INNER PAGE) ===== */
 .hero {
   background: #f7f4ee;
-  padding: 64px 0;
 }
 
 .hero-grid {
@@ -314,10 +277,9 @@ section,
 
 .hero-card {
   background: #fff;
-  padding: 24px;
-  border-radius: 10px;
+  padding: 28px;
   border: 1px solid #e7e1d8;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
 }
 
 /* ===== HOMEPAGE SECTION HELPERS ===== */
@@ -335,36 +297,34 @@ section,
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-  margin-top: 2rem;
 }
 
 .card {
   background: #fff;
-  padding: 22px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 20px;
+  border: 1px solid #e4ddd3;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
 }
 
 .card h3 {
-  margin-bottom: 0.75rem;
   font-size: 1.1rem;
-}
-
-.card p:last-child {
-  margin-bottom: 0;
 }
 
 .card img {
   margin-bottom: 1rem;
   border-radius: 8px;
+}
+
+.card .button,
+.card .button-primary,
+.card .button-secondary {
+  margin-top: 0.5rem;
 }
 
 /* ===== AREA LINKS ===== */
@@ -427,20 +387,8 @@ section,
   align-items: start;
 }
 
-.city-hero-copy h1 {
-  margin-bottom: 12px;
-}
-
-.city-hero-copy .section-intro {
-  max-width: 760px;
-}
-
 .city-hero-card {
   padding: 28px;
-}
-
-.city-hero-card h2 {
-  margin-bottom: 14px;
 }
 
 /* ===== CONTACT CTA SECTION ===== */
@@ -465,18 +413,8 @@ section,
   color: #9f1d22;
 }
 
-.cta-contact-copy h2 {
-  margin-bottom: 0.65rem;
-}
-
-.cta-contact-copy .section-intro {
-  max-width: 760px;
-  margin-bottom: 1.25rem;
-}
-
 .cta-contact-points {
   display: grid;
-  gap: 14px;
 }
 
 .contact-point-row {
@@ -488,7 +426,6 @@ section,
 .contact-point {
   background: #fff;
   border: 1px solid #e4ddd3;
-  border-radius: 10px;
   padding: 16px 18px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
@@ -510,12 +447,10 @@ section,
 }
 
 .contact-point h3 {
-  margin-bottom: 0.55rem;
   font-size: 1rem;
 }
 
 .contact-point-primary h3 {
-  margin-bottom: 0.7rem;
   font-size: 1.02rem;
 }
 
@@ -527,19 +462,6 @@ section,
   color: #666;
 }
 
-.cta-contact-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 1.1rem;
-}
-
-.cta-contact-actions .button,
-.cta-contact-actions .button-primary,
-.cta-contact-actions .button-secondary {
-  margin-top: 0;
-}
-
 .cta-contact-card {
   background: #111;
   color: #fff;
@@ -548,11 +470,6 @@ section,
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   position: sticky;
   top: 24px;
-}
-
-.cta-contact-card h3 {
-  margin-bottom: 0.9rem;
-  font-size: 1.05rem;
 }
 
 .contact-benefits {
@@ -580,10 +497,6 @@ section,
 .contact-mini-links a:hover {
   color: #ffd95a;
   text-decoration: underline;
-}
-
-.cta-contact-map {
-  margin-top: 28px;
 }
 
 .cta-contact-map iframe {
@@ -642,19 +555,16 @@ section,
 .service-area-teaser-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
 }
 
 .service-area-card {
   display: block;
   padding: 1.5rem;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 16px;
   background: #fff;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
@@ -664,16 +574,11 @@ section,
   border-color: rgba(0, 0, 0, 0.14);
 }
 
-.service-area-card h3 {
-  margin-bottom: 0.5rem;
-}
-
 .service-area-card p {
   margin: 0;
 }
 
 .section-cta {
-  margin-top: 2rem;
   text-align: center;
 }
 
@@ -681,8 +586,6 @@ section,
 .nearby-service-area-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
 }
 
 /* ===== MELBOURNE PAGE REFINEMENTS ===== */
@@ -692,7 +595,6 @@ section,
 
 .hero-copy h1 {
   font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: 0.85rem;
 }
 
 .hero-copy p:last-of-type {
@@ -700,51 +602,8 @@ section,
   margin-bottom: 0;
 }
 
-.hero-card {
-  background: #fff;
-  padding: 28px;
-  border-radius: 12px;
-  border: 1px solid #e7e1d8;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-}
-
 .hero-card h2 {
-  margin-bottom: 0.75rem;
   font-size: 1.15rem;
-}
-
-.hero-card p:last-child {
-  margin-bottom: 0;
-}
-
-.section-heading {
-  margin-bottom: 1.5rem;
-}
-
-.section-heading h2 {
-  margin-bottom: 0.6rem;
-}
-
-.section .cards {
-  margin-top: 1.5rem;
-}
-
-.card {
-  padding: 20px;
-  border: 1px solid #e4ddd3;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
-}
-
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
-}
-
-.card .button,
-.card .button-primary,
-.card .button-secondary {
-  margin-top: 0.5rem;
 }
 
 .section-alt .section-heading,
@@ -799,25 +658,96 @@ section,
   text-decoration: underline;
 }
 
-/* ===== SERVICE AREA SECTION TIGHTENING ===== */
+/* ===== GLOBAL SECTION RHYTHM ===== */
+section,
+.section {
+  padding: 56px 0;
+}
+
+.hero,
+.hero-visual {
+  padding: 64px 0;
+}
+
+.section-heading {
+  margin-bottom: 1.5rem;
+}
+
+.section-heading h2,
+.cta-contact-copy h2,
+.city-hero-copy h1,
+.hero-copy h1,
+.hero-left h1 {
+  margin-bottom: 0.65rem;
+}
+
+.section-intro,
+.cta-contact-copy .section-intro,
+.city-hero-copy .section-intro {
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  max-width: 760px;
+}
+
+.section-actions,
+.section-cta,
+.hero-actions,
+.cta-contact-actions {
+  margin-top: 1.5rem;
+}
+
+/* ===== CARD / GRID RHYTHM ===== */
+.cards,
+.service-area-teaser-grid,
+.nearby-service-area-grid,
+.cta-contact-points {
+  margin-top: 1.5rem;
+}
+
+.cards,
+.service-area-teaser-grid,
 .nearby-service-area-grid {
-  margin-top: 1.5rem;
+  gap: 20px;
 }
 
-.service-area-card {
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+.card,
+.service-area-card,
+.contact-point,
+.contact-point-primary,
+.hero-card,
+.city-hero-card {
+  border-radius: 12px;
 }
 
-.section-cta {
-  margin-top: 1.5rem;
+/* ===== CONTENT SPACING INSIDE CARDS ===== */
+.card h3,
+.service-area-card h3,
+.contact-point h3,
+.contact-point-primary h3,
+.hero-card h2,
+.city-hero-card h2,
+.cta-contact-card h3 {
+  margin-bottom: 0.65rem;
 }
 
-/* ===== SECTION RHYTHM REFINEMENT ===== */
+.card p:last-child,
+.service-area-card p:last-child,
+.contact-point p:last-child,
+.contact-point-primary p:last-child,
+.hero-card p:last-child,
+.city-hero-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== SECTION TRANSITIONS ===== */
 .hero + .section,
 .hero + .section-alt,
-.hero + [data-include] {
-  padding-top: 56px;
+.hero + [data-include],
+.hero-visual + .section,
+.hero-visual + .section-alt,
+.hero-visual + [data-include] {
+  padding-top: 48px;
 }
 
 .section + .section,
@@ -825,6 +755,26 @@ section,
 .section-alt + .section,
 .section-alt + .section-alt {
   border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* ===== CTA CONTACT TIGHTENING ===== */
+.cta-contact-copy .section-intro {
+  margin-bottom: 1.25rem;
+}
+
+.cta-contact-points {
+  gap: 12px;
+}
+
+.cta-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.cta-contact-map {
+  margin-top: 24px;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -854,156 +804,6 @@ section,
 }
 
 @media (max-width: 768px) {
-  .cta-contact-actions {
-    gap: 10px;
-    justify-content: flex-start;
-  }
-
-  .contact-point,
-  .contact-point-primary,
-  .cta-contact-card {
-    padding: 18px;
-  }
-
-  .cta-contact-map {
-    margin-top: 24px;
-  }
-
-  .cta-contact-map iframe {
-    min-height: 240px;
-  }
-}
-
-@media (max-width: 640px) {
-  .service-area-teaser-grid,
-  .nearby-service-area-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* ===== GLOBAL SECTION RHYTHM ===== */
-
-section,
-.section {
-  padding: 56px 0;
-}
-
-.hero,
-.hero-visual {
-  padding: 64px 0;
-}
-
-.section-heading {
-  margin-bottom: 1.5rem;
-}
-
-.section-heading h2,
-.cta-contact-copy h2,
-.city-hero-copy h1,
-.hero-copy h1,
-.hero-left h1 {
-  margin-bottom: 0.65rem;
-}
-
-.section-intro,
-.cta-contact-copy .section-intro,
-.city-hero-copy .section-intro {
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  max-width: 760px;
-}
-
-.section-actions,
-.section-cta,
-.cta-contact-actions,
-.hero-actions {
-  margin-top: 1.5rem;
-}
-
-/* ===== CARD / GRID RHYTHM ===== */
-
-.cards,
-.service-area-teaser-grid,
-.nearby-service-area-grid,
-.cta-contact-points {
-  margin-top: 1.5rem;
-}
-
-.cards,
-.service-area-teaser-grid,
-.nearby-service-area-grid {
-  gap: 20px;
-}
-
-.card,
-.service-area-card,
-.contact-point,
-.contact-point-primary,
-.hero-card,
-.city-hero-card {
-  border-radius: 12px;
-}
-
-/* ===== CONTENT SPACING INSIDE CARDS ===== */
-
-.card h3,
-.service-area-card h3,
-.contact-point h3,
-.contact-point-primary h3,
-.hero-card h2,
-.city-hero-card h2,
-.cta-contact-card h3 {
-  margin-bottom: 0.65rem;
-}
-
-.card p:last-child,
-.service-area-card p:last-child,
-.contact-point p:last-child,
-.contact-point-primary p:last-child,
-.hero-card p:last-child,
-.city-hero-card p:last-child {
-  margin-bottom: 0;
-}
-
-/* ===== SECTION TRANSITIONS ===== */
-
-.hero + .section,
-.hero + .section-alt,
-.hero + [data-include],
-.hero-visual + .section,
-.hero-visual + .section-alt,
-.hero-visual + [data-include] {
-  padding-top: 48px;
-}
-
-.section + .section,
-.section + .section-alt,
-.section-alt + .section,
-.section-alt + .section-alt {
-  border-top: 1px solid rgba(0, 0, 0, 0.04);
-}
-
-/* ===== CTA CONTACT TIGHTENING ===== */
-
-.cta-contact-copy .section-intro {
-  margin-bottom: 1.25rem;
-}
-
-.cta-contact-points {
-  gap: 12px;
-}
-
-.cta-contact-actions {
-  gap: 10px;
-  margin-top: 1rem;
-}
-
-.cta-contact-map {
-  margin-top: 24px;
-}
-
-/* ===== MOBILE RHYTHM ===== */
-
-@media (max-width: 768px) {
   section,
   .section {
     padding: 48px 0;
@@ -1029,6 +829,10 @@ section,
     margin-bottom: 0;
   }
 
+  .cta-contact-actions {
+    justify-content: flex-start;
+  }
+
   .cards,
   .service-area-teaser-grid,
   .nearby-service-area-grid,
@@ -1044,5 +848,16 @@ section,
   .hero-card,
   .city-hero-card {
     padding: 18px;
+  }
+
+  .cta-contact-map iframe {
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 640px) {
+  .service-area-teaser-grid,
+  .nearby-service-area-grid {
+    grid-template-columns: 1fr;
   }
 }
