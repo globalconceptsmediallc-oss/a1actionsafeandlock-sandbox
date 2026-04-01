@@ -240,34 +240,18 @@ section,
 }
 
 /* ===== BUTTONS ===== */
-.hero-cta,
-.button,
-.button-primary,
-.button-secondary {
+
+/* BASE BUTTON (used everywhere) */
+.button {
   display: inline-block;
   padding: 12px 18px;
   border-radius: 6px;
   font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
-}
-
-.hero-cta,
-.button-primary {
-  background: #c62828;
-  color: #fff;
-}
-
-.hero-cta:hover,
-.button-primary:hover {
-  background: #a61f1f;
-  color: #fff;
-  text-decoration: none;
-}
-
-.button {
   background: #111;
   color: #fff;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .button:hover {
@@ -276,23 +260,43 @@ section,
   text-decoration: none;
 }
 
-.button-secondary {
+/* PRIMARY BUTTON (RED CTA) */
+.button.button-primary {
+  background: #c62828;
+  color: #fff;
+}
+
+.button.button-primary:hover {
+  background: #a61f1f;
+  color: #fff;
+}
+
+/* SECONDARY BUTTON (YELLOW) */
+.button.button-secondary {
   background: #f2c230;
   color: #111;
 }
 
-.button-secondary:hover {
+.button.button-secondary:hover {
   background: #ddb01f;
   color: #111;
+}
+
+/* HERO CTA (kept separate for flexibility if needed later) */
+.hero-cta {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
   text-decoration: none;
+  background: #c62828;
+  color: #fff;
 }
 
-.hero-visual a:not(.hero-cta):not(.button):not(.button-primary):not(.button-secondary) {
-  color: #f2c230;
-}
-
-.hero-visual a:not(.hero-cta):not(.button):not(.button-primary):not(.button-secondary):hover {
-  color: #ffd95a;
+.hero-cta:hover {
+  background: #a61f1f;
+  color: #fff;
 }
 
 /* ===== HERO (INNER PAGE) ===== */
