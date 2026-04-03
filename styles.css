@@ -182,11 +182,37 @@ section,
   display: inline-block;
 }
 
+/* NEW: wrapper for link + caret */
+.nav-dropdown-trigger {
+  display: flex;
+  align-items: center;
+}
+
+/* main link (Services) */
 .nav-dropbtn {
   display: inline-block;
   padding: 8px 0;
 }
 
+/* NEW: caret toggle button */
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+  padding: 2px 6px;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.nav-dropdown-toggle:hover {
+  color: #f2c230;
+}
+
+/* dropdown menu */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -215,8 +241,16 @@ section,
   text-decoration: none;
 }
 
-.nav-dropdown:hover .dropdown-content,
-.nav-dropdown:focus-within .dropdown-content {
+/* DESKTOP: hover support */
+@media (hover: hover) and (pointer: fine) {
+  .nav-dropdown:hover .dropdown-content,
+  .nav-dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+}
+
+/* MOBILE / CLICK: toggle class */
+.nav-dropdown.open .dropdown-content {
   display: block;
 }
 
