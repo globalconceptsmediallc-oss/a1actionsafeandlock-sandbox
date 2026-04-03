@@ -861,3 +861,54 @@ section,
     grid-template-columns: 1fr;
   }
 }
+/* Unified card grid system */
+.cards,
+.service-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Unified card styling */
+.card,
+.service-card,
+.service-area-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.card h3,
+.service-card h3,
+.service-area-card h3 {
+  margin: 0 0 12px;
+}
+
+.card p,
+.service-card p,
+.service-area-card p {
+  margin: 0 0 16px;
+}
+
+.card .button,
+.service-card .button,
+.service-area-card .button {
+  margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .cards,
+  .service-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .cards,
+  .service-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
