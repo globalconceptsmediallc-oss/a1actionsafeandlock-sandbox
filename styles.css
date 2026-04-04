@@ -1329,3 +1329,13 @@ section,
   min-height: 20px;
   line-height: 1;
 }
+.services-preview,
+.why-choose-a1,
+.real-work,
+.mobile-safe-service {
+  background: #fff;
+}
+
+.mobile-safe-service {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
