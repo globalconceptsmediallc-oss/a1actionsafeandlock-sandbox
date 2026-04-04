@@ -1342,3 +1342,19 @@ section,
 .mobile-safe-service {
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
+/* ===== HOMEPAGE SECTION RHYTHM ===== */
+.service-area-teaser {
+  background: #f5f2ec;
+}
+
+.services-preview,
+.why-choose-a1,
+.mobile-safe-service,
+.real-work {
+  background: #fff;
+}
+.service-area-teaser {
+  background: #f5f2ec;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
