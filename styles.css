@@ -368,7 +368,7 @@ section,
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(260px, 360px);
   gap: 40px;
-  align-items: start; /* 🔥 KEY FIX */
+  align-items: start;
 }
 
 .hero-left {
@@ -459,7 +459,7 @@ section,
 
 .hero-right {
   display: flex;
-  align-items: flex-start; /* 🔥 KEY FIX */
+  align-items: flex-start;
   justify-content: center;
   padding-top: 8px;
 }
@@ -467,18 +467,10 @@ section,
 .hero-right img {
   display: block;
   width: 100%;
-  max-width: 340px; /* 🔥 BIGGER LOGO */
+  max-width: 340px;
   height: auto;
   margin: 0 auto;
   border-radius: 0;
-}
-
-.hero-visual a:not(.button):not(.button-primary):not(.button-secondary) {
-  color: #f5bd1c;
-}
-
-.hero-visual a:not(.button):not(.button-primary):not(.button-secondary):hover {
-  color: #ffd95a;
 }
 
 /* ===== LEGACY INNER PAGE HERO ===== */
