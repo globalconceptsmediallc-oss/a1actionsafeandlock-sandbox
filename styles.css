@@ -214,13 +214,27 @@ section,
 }
 
 .nav-dropdown-trigger {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  gap: 2px;
+  line-height: 1;
 }
 
 .nav-dropbtn {
-  display: inline-block;
-  padding: 8px 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  line-height: 1;
+}
+
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0;
+  padding: 0 4px;
+  min-height: 20px;
+  line-height: 1;
 }
 
 .nav-dropdown-toggle {
@@ -1298,4 +1312,27 @@ section,
   .cta-contact-actions {
     gap: 10px 14px;
   }
+}
+.nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  line-height: 1;
+}
+
+.nav-dropbtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  line-height: 1;
+}
+
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0;
+  padding: 0 4px;
+  min-height: 20px;
+  line-height: 1;
 }
