@@ -973,11 +973,19 @@ section,
     max-width: 260px;
   }
 
-  .hero-grid,
-  .city-hero-grid,
-  .cta-contact-grid {
-    grid-template-columns: 1fr;
-  }
+.hero-grid,
+.city-hero-grid {
+  grid-template-columns: 1fr;
+}
+
+/* CTA CONTACT (UPDATED MOBILE LAYOUT) */
+.cta-contact-grid {
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "copy"
+    "card"
+    "map";
+}
 
   .service-area-teaser-grid,
   .nearby-service-area-grid {
