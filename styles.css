@@ -348,7 +348,7 @@ section,
   gap: 10px 12px;
 }
 
-/* ===== HOMEPAGE HERO (LOCKED TO HEADER) ===== */
+/* ===== HOMEPAGE HERO ===== */
 .hero-visual {
   background: linear-gradient(90deg, #0d0d0d 0%, #171717 55%, #222222 100%);
   color: #fff;
@@ -366,14 +366,14 @@ section,
 
 .hero-content {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(180px, 300px);
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 360px);
   gap: 40px;
-  align-items: center;
+  align-items: start; /* 🔥 KEY FIX */
 }
 
 .hero-left {
   min-width: 0;
-  max-width: 700px;
+  max-width: 720px;
 }
 
 .hero-left .eyebrow {
@@ -383,8 +383,8 @@ section,
 
 .hero-left h1 {
   margin: 0 0 16px;
-  font-size: clamp(2.6rem, 5vw, 4.2rem);
-  line-height: 1.02;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.03;
   color: #fff;
   max-width: 10ch;
 }
@@ -459,14 +459,15 @@ section,
 
 .hero-right {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* 🔥 KEY FIX */
   justify-content: center;
+  padding-top: 8px;
 }
 
 .hero-right img {
   display: block;
   width: 100%;
-  max-width: 300px;
+  max-width: 340px; /* 🔥 BIGGER LOGO */
   height: auto;
   margin: 0 auto;
   border-radius: 0;
