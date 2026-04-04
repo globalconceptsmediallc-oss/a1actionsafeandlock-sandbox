@@ -1109,3 +1109,80 @@ section,
     width: 100%;
   }
 }
+/* FOOTER BASE */
+.site-footer {
+  background: #0c0c0c;
+  color: #f7f3ea;
+  text-align: center;
+  padding: 50px 20px;
+  border-top: 4px solid #be1e2d; /* 🔴 red anchor */
+}
+
+/* INTRO TEXT */
+.footer-intro {
+  max-width: 700px;
+  margin: 0 auto 25px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* NAV LINKS */
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.footer-nav a {
+  color: #f5bd1c;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.footer-nav a:hover {
+  background: rgba(190, 30, 45, 0.15); /* subtle red hover */
+  color: #fff;
+}
+
+/* SOCIAL */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #f5bd1c;
+  border-radius: 50%;
+  color: #f5bd1c;
+  font-size: 16px;
+  transition: all 0.25s ease;
+}
+
+.footer-social a:hover {
+  background: #be1e2d;
+  border-color: #be1e2d;
+  color: #fff;
+}
+
+/* CTA BUTTON */
+.footer-cta {
+  margin-top: 10px;
+}
+
+.footer-cta .button {
+  font-size: 1rem;
+  padding: 12px 22px;
+}
