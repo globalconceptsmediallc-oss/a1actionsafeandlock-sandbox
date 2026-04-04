@@ -538,12 +538,15 @@ section,
 /* ===== HOMEPAGE SECTION HELPERS ===== */
 .services-preview,
 .trusted-local-help,
-.local-response {
+.local-response,
+.why-choose-a1,
+.real-work,
+.mobile-safe-service {
   background: #fff;
 }
 
 .mobile-safe-service {
-  background: #f5f2ec;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 /* ===== CARD / GRID SYSTEM ===== */
