@@ -720,205 +720,24 @@ section,
 .cta-contact-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(270px, 0.8fr);
+  grid-template-areas:
+    "copy card"
+    "map  card";
   gap: 28px;
   align-items: start;
 }
 
-.cta-contact-copy .section-intro {
-  margin-bottom: 1.25rem;
-}
-
-.cta-contact-points {
-  display: grid;
-  gap: 12px;
-  margin-top: 1.5rem;
-}
-
-.contact-point-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-
-.contact-point {
-  background: #fff;
-  border: 1px solid #e4ddd3;
-  padding: 16px 18px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
-
-.contact-point-primary {
-  background: #fff;
-  border: 1px solid #d8d1c7;
-  padding: 18px 20px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-}
-
-.contact-point-primary-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items: start;
-}
-
-.contact-point-primary-col p,
-.contact-point p {
-  margin-bottom: 0;
-}
-
-.contact-point h3 {
-  font-size: 1rem;
-}
-
-.contact-point-primary h3 {
-  font-size: 1.02rem;
-  margin-bottom: 14px;
-}
-
-.contact-point p {
-  line-height: 1.55;
-}
-
-.contact-sub {
-  color: #666;
-}
-
-.contact-point-primary-col a {
-  color: #be1e2d;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.contact-point-primary-col a:hover {
-  text-decoration: underline;
-}
-
-.cta-contact-card,
-.contact-highlight {
-  background: #111;
-  color: #fff;
-  border-radius: 16px;
-  padding: 28px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+.cta-contact-copy {
+  grid-area: copy;
 }
 
 .cta-contact-card {
-  position: sticky;
-  top: 24px;
-  border-top: 4px solid #be1e2d;
-}
-
-.cta-card-eyebrow {
-  color: #f5bd1c;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.cta-contact-card h3 {
-  color: #fff;
-  margin-bottom: 18px;
-}
-
-.contact-highlight h3 {
-  font-size: 1.05rem;
-  margin-bottom: 1rem;
-}
-
-.contact-highlight p,
-.contact-highlight li {
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.contact-benefits,
-.contact-checklist {
-  padding-left: 18px;
-  margin: 0 0 22px;
-}
-
-.contact-benefits li,
-.contact-checklist li {
-  margin-bottom: 10px;
-  line-height: 1.5;
-}
-
-.contact-links,
-.contact-mini-links {
-  display: grid;
-  gap: 10px;
-  margin-top: 1rem;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
-}
-
-.contact-links a,
-.contact-mini-links a {
-  color: #f5bd1c;
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-.contact-links a:hover,
-.contact-mini-links a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-.contact-mini-reviews {
-  margin-top: 22px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
-  text-align: left;
-}
-
-.contact-mini-stars {
-  color: #f5bd1c;
-  font-size: 1rem;
-  letter-spacing: 0.16em;
-  margin-bottom: 10px;
-}
-
-.contact-mini-text {
-  margin-bottom: 14px;
-  color: #f7f3ea;
-  font-size: 0.95rem;
-}
-
-.contact-mini-review-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 16px;
-}
-
-.contact-mini-review-links a {
-  font-size: 0.9rem;
-  color: #f2c230;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.contact-mini-review-links a:hover {
-  color: #ffd95a;
-  text-decoration: underline;
-}
-
-.review-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 22px;
-}
-
-.review-actions .button {
-  min-width: 145px;
-  text-align: center;
+  grid-area: card;
 }
 
 .cta-contact-map {
-  margin-top: 24px;
+  grid-area: map;
+  margin-top: 0;
 }
 
 .cta-contact-map iframe {
