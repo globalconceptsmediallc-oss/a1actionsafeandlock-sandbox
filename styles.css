@@ -1549,3 +1549,44 @@ section,
     font-size: 0.98rem;
   }
 }
+/* HERO SIDE-BY-SIDE FIX */
+.hero-visual .hero-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 420px);
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-visual .hero-left {
+  min-width: 0;
+}
+
+.hero-visual .hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-visual .hero-right img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .hero-visual .hero-content {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .hero-visual .hero-right {
+    justify-content: flex-start;
+  }
+
+  .hero-visual .hero-right img {
+    max-width: 260px;
+    margin: 0;
+  }
+}
