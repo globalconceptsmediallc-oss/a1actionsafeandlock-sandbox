@@ -976,3 +976,9 @@ section,
   color: #ffd95a;
   text-decoration: underline;
 }
+.contact-sidebar,
+.cta-contact-sidebar,
+.why-call-us {
+  background: #111;
+  border-top: 4px solid #be1e2d;
+}
