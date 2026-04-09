@@ -1189,31 +1189,34 @@ section,
   display: flex;
   gap: 12px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .social-icon {
   width: 44px;
   height: 44px;
-  background-color: #f5bd1c; /* brand yellow */
+  background: #f5bd1c;
   border-radius: 10px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
 }
 
 .social-icon img {
   width: 20px;
   height: 20px;
-  filter: none; /* keep icons black */
+  display: block;
 }
 
 .social-icon:hover {
-  background-color: #be1e2d; /* brand red */
+  background: #be1e2d;
+  transform: translateY(-2px);
 }
 
 .social-icon:hover img {
-  filter: brightness(0) invert(1); /* turns icon white */
+  filter: brightness(0) invert(1);
 }
 .social-icon {
   box-shadow: 0 2px 6px rgba(0,0,0,0.25);
