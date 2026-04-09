@@ -708,21 +708,6 @@ section,
   color: #ffd95a;
 }
 
-/* ===== CONTACT CTA SECTION ===== */
-.cta-contact {
-  background: #f5f2ec;
-}
-
-.cta-contact.section-alt {
-  background: #f5f2ec;
-}
-
-.cta-contact-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-  gap: 56px; /* THIS is the key fix */
-  align-items: start;
-}
 
 /* ===== CONTACT CTA SECTION ===== */
 .cta-contact {
@@ -812,30 +797,6 @@ section,
       "map";
     gap: 28px;
   }
-}
-
-/* optional: tighten typography inside */
-.cta-contact-card h3 {
-  margin-top: 6px;
-  margin-bottom: 14px;
-}
-
-.contact-benefits {
-  padding-left: 18px;
-  margin-bottom: 18px;
-}
-
-.contact-benefits li {
-  margin-bottom: 8px;
-}
-
-.cta-contact-map iframe {
-  display: block;
-  width: 100%;
-  min-height: 280px;
-  border: 0;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 /* ===== WHY CHOOSE SECTION ===== */
