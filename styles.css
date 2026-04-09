@@ -231,18 +231,10 @@ section,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-left: 0;
-  padding: 0 4px;
-  min-height: 20px;
-  line-height: 1;
-}
-
-.nav-dropdown-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   margin-left: 4px;
   padding: 2px 6px;
+  min-height: 20px;
+  line-height: 1;
   background: transparent;
   border: 0;
   color: #fff;
@@ -708,9 +700,7 @@ section,
   color: #ffd95a;
 }
 
-
 /* ===== CONTACT CTA SECTION (FINAL CLEAN VERSION) ===== */
-
 .cta-contact {
   background: #f5f2ec;
 }
@@ -719,7 +709,6 @@ section,
   background: #f5f2ec;
 }
 
-/* ===== GRID LAYOUT ===== */
 .cta-contact-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.82fr);
@@ -750,7 +739,6 @@ section,
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
 }
 
-/* ===== RIGHT CARD (WHY CUSTOMERS CALL US) ===== */
 .cta-card-eyebrow {
   color: #f5bd1c;
   font-size: 0.9rem;
@@ -773,7 +761,6 @@ section,
   margin-bottom: 10px;
 }
 
-/* ===== TRUST / PROOF ===== */
 .contact-mini-proof {
   margin: 0 0 18px;
 }
@@ -790,7 +777,6 @@ section,
   color: rgba(255, 255, 255, 0.96);
 }
 
-/* ===== REVIEW BUTTONS ===== */
 .review-actions {
   display: flex;
   flex-wrap: wrap;
@@ -802,7 +788,6 @@ section,
   min-height: 44px;
 }
 
-/* ===== SERVICE LINKS (PILLS) ===== */
 .contact-mini-links {
   display: flex;
   flex-wrap: wrap;
@@ -826,7 +811,6 @@ section,
   text-decoration: none;
 }
 
-/* ===== TRUST STRIP (LEFT SIDE) ===== */
 .cta-contact-trust-strip {
   display: flex;
   flex-wrap: wrap;
@@ -846,7 +830,6 @@ section,
   color: #111;
 }
 
-/* ===== CONTACT BOX ===== */
 .contact-point-primary {
   background: #fff;
   border: 1px solid #ddd6ca;
@@ -871,7 +854,6 @@ section,
   color: #423e38;
 }
 
-/* ===== CONTACT METHODS (PHONE / EMAIL BOXES) ===== */
 .contact-method-list {
   display: grid;
   gap: 12px;
@@ -912,7 +894,6 @@ section,
   word-break: break-word;
 }
 
-/* ===== CTA BUTTONS ===== */
 .cta-contact-actions {
   display: flex;
   flex-wrap: wrap;
@@ -924,7 +905,6 @@ section,
   min-height: 50px;
 }
 
-/* ===== SUPPORTING NOTE ===== */
 .cta-contact-note {
   margin-top: 14px;
   margin-bottom: 0;
@@ -933,7 +913,6 @@ section,
   color: #4a4640;
 }
 
-/* ===== MAP ===== */
 .cta-contact-map iframe {
   display: block;
   width: 100%;
@@ -941,29 +920,6 @@ section,
   border: 0;
   border-radius: 14px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .cta-contact-grid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "copy"
-      "card"
-      "map";
-    gap: 28px;
-  }
-
-  .contact-point-primary-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 560px) {
-  .cta-contact-actions .button,
-  .review-actions .button {
-    width: 100%;
-  }
 }
 
 /* ===== WHY CHOOSE SECTION ===== */
@@ -1064,22 +1020,17 @@ section,
   justify-content: center;
   width: 44px;
   height: 44px;
-  padding: 0; /* keeps icon perfectly centered */
+  padding: 0;
   border-radius: 10px;
   border: none;
   background: #f5bd1c;
   text-decoration: none;
+  overflow: visible;
   transition:
     transform 0.2s ease,
     background-color 0.2s ease,
     box-shadow 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
-}
-
-.footer-social a.social-icon img {
-  width: 24px;
-  height: 24px;
-  display: block;
 }
 
 .footer-social a.social-icon:hover {
@@ -1089,9 +1040,12 @@ section,
 }
 
 .footer-social a.social-icon img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   display: block;
+  border-radius: 0 !important;
+  object-fit: contain !important;
+  clip-path: none !important;
 }
 
 .footer-social a.social-icon:hover img {
@@ -1118,29 +1072,7 @@ section,
   white-space: nowrap;
   border: 0;
 }
-.footer-social a.social-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  border: none;
-  background: #f5bd1c;
-  text-decoration: none;
-  overflow: visible;
-}
 
-.footer-social a.social-icon img {
-  width: 20px;
-  height: 20px;
-  display: block;
-
-  /* 🔥 THIS IS THE FIX */
-  border-radius: 0 !important;
-  object-fit: contain !important;
-  clip-path: none !important;
-}
 /* ===== SECTION TRANSITIONS ===== */
 .section-alt .section-heading,
 .section-alt .section-intro {
@@ -1161,6 +1093,13 @@ section,
 .section-alt + .section,
 .section-alt + .section-alt {
   border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* ===== HOMEPAGE SECTION RHYTHM ===== */
+.service-area-teaser {
+  background: #f5f2ec;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -1217,19 +1156,19 @@ section,
     max-width: 260px;
   }
 
-.hero-grid,
-.city-hero-grid {
-  grid-template-columns: 1fr;
-}
+  .hero-grid,
+  .city-hero-grid {
+    grid-template-columns: 1fr;
+  }
 
-/* CTA CONTACT (UPDATED MOBILE LAYOUT) */
-.cta-contact-grid {
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "copy"
-    "card"
-    "map";
-}
+  .cta-contact-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "copy"
+      "card"
+      "map";
+    gap: 28px;
+  }
 
   .service-area-teaser-grid,
   .nearby-service-area-grid {
@@ -1359,7 +1298,8 @@ section,
   }
 
   .hero-actions .button,
-  .review-actions .button {
+  .review-actions .button,
+  .cta-contact-actions .button {
     width: 100%;
   }
 
@@ -1379,53 +1319,4 @@ section,
   .cta-contact-actions {
     gap: 10px 14px;
   }
-}
-.nav-dropdown-trigger {
-  display: inline-flex;
-  align-items: center;
-  gap: 2px;
-  line-height: 1;
-}
-
-.nav-dropbtn {
-  display: inline-flex;
-  align-items: center;
-  padding: 0;
-  line-height: 1;
-}
-
-.nav-dropdown-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 0;
-  padding: 0 4px;
-  min-height: 20px;
-  line-height: 1;
-}
-.services-preview,
-.why-choose-a1,
-.real-work,
-.mobile-safe-service {
-  background: #fff;
-}
-
-.mobile-safe-service {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-}
-/* ===== HOMEPAGE SECTION RHYTHM ===== */
-.service-area-teaser {
-  background: #f5f2ec;
-}
-
-.services-preview,
-.why-choose-a1,
-.mobile-safe-service,
-.real-work {
-  background: #fff;
-}
-.service-area-teaser {
-  background: #f5f2ec;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
