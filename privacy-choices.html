@@ -1,74 +1,140 @@
-<!-- A-1: Your Privacy Choices (styled + working toggles) -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  .a1-legal{font-family:'Montserrat',Arial,sans-serif;max-width:900px;margin:0 auto;padding:24px 16px;line-height:1.65;color:#111}
-  .a1-legal h1{font-size:clamp(28px,4vw,40px);margin:0;color:#BE1E2D}
-  .a1-legal .updated{margin-top:14px;margin-bottom:18px;color:#555;font-size:.95rem}
-  .a1-legal h2{margin-top:28px;color:#BE1E2D;font-size:clamp(20px,2.6vw,26px)}
-  .a1-legal a{color:#BE1E2D;text-decoration:underline}
-  .prefs{max-width:560px;padding:16px;border:1px solid #eaeaea;border-radius:12px}
-  .prefs label{display:flex;align-items:center;gap:10px;margin:8px 0}
-  .prefs button{background:#f5bd1c;border:0;border-radius:9999px;padding:10px 18px;font-weight:700}
-  .prefs button+button{background:#000;color:#fff;margin-left:8px}
-  .a1-legal .note{font-size:12px;color:#666;margin-top:8px}
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<section class="a1-legal">
-  <h1>Your Privacy Choices</h1>
-  <p class="updated"><em>Last updated: September 19, 2025</em></p>
+  <title>Your Privacy Choices | A-1 Action Safe &amp; Lock</title>
+  <meta
+    name="description"
+    content="Manage your privacy choices for A-1 Action Safe &amp; Lock, including analytics and advertising preferences."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.a1actionsafeandlock.com/privacy-choices.html" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
 
-  <p>Use the controls below to manage non-essential cookies used on this site (for U.S. visitors). We honor <strong>Global Privacy Control (GPC)</strong> where applicable. Visitors in the EEA/UK do not receive non-essential cookies by default.</p>
+  <div data-include="partials/header.html"></div>
 
-  <div id="choices" class="prefs">
-    <label><input type="checkbox" id="opt-analytics"> Allow Analytics (helps us improve the site)</label>
-    <label><input type="checkbox" id="opt-ads"> Allow Ads/Remarketing (if enabled in the future)</label>
-    <div style="margin-top:10px;">
-      <button id="save-privacy">Save Preferences</button>
-      <button id="apply-reload">Apply &amp; Reload</button>
-    </div>
-    <div id="saved-msg" style="margin-top:10px;color:green;display:none;">Saved.</div>
-    <p id="gpc-note" class="note"></p>
-  </div>
+  <main>
+    <section class="section">
+      <div class="container legal-page">
+        <div class="section-heading">
+          <p class="eyebrow">Legal</p>
+          <h1>Your Privacy Choices</h1>
+          <p class="section-intro">
+            Use the options below to manage non-essential cookies and tracking
+            preferences for this website.
+          </p>
+        </div>
 
-  <p class="note">These controls apply to this website only and rely on your browser/local storage. Clearing cookies or using a different browser/device will reset your choices.</p>
-</section>
+        <p><strong>Last updated:</strong> April 2026</p>
 
-<script>
-// Respect/Show GPC status
-const gpc = (navigator.globalPrivacyControl === true);
-document.getElementById('gpc-note').textContent = gpc
-  ? 'Your browser is sending a Global Privacy Control (GPC) signal. We treat this as an opt-out.'
-  : 'Your browser is not sending a GPC signal. You can still use the switches above.';
+        <p>
+          This page allows you to manage certain non-essential privacy settings
+          for this website. These controls apply only to this site and rely on
+          your current browser and device.
+        </p>
 
-// Load saved preferences or defaults
-function loadChoices() {
-  const saved = JSON.parse(localStorage.getItem('us_privacy_optout') || 'null');
-  const initial = saved || (gpc ? { analytics:false, ads:false } : { analytics:true, ads:true });
-  document.getElementById('opt-analytics').checked = !!initial.analytics;
-  document.getElementById('opt-ads').checked = !!initial.ads;
-  // Also set GA disable flag immediately on this page view:
-  window['ga-disable-G-V5FTYT8J50'] = !initial.analytics; // ← your GA4 ID
-}
-loadChoices();
+        <p>
+          Where applicable, we honor browser-based privacy preference signals such
+          as Global Privacy Control (GPC). You can also review our
+          <a href="./privacy-policy.html">Privacy Policy</a> for more information
+          about how website information may be collected and used.
+        </p>
 
-function applyChoices({ analytics, ads }) {
-  localStorage.setItem('us_privacy_optout', JSON.stringify({ analytics, ads }));
-  window['ga-disable-G-V5FTYT8J50'] = !analytics;
-  if (!ads) { window.fbq = function(){}; }
-}
+        <div id="choices" class="privacy-choices-card">
+          <label class="privacy-choice-row">
+            <input type="checkbox" id="opt-analytics" />
+            <span>Allow Analytics (helps us improve the site)</span>
+          </label>
 
-document.getElementById('save-privacy').addEventListener('click', () => {
-  const analytics = document.getElementById('opt-analytics').checked;
-  const ads = document.getElementById('opt-ads').checked;
-  applyChoices({ analytics, ads });
-  const msg = document.getElementById('saved-msg');
-  msg.style.display = 'block'; setTimeout(() => msg.style.display = 'none', 1500);
-});
+          <label class="privacy-choice-row">
+            <input type="checkbox" id="opt-ads" />
+            <span>Allow Ads/Remarketing (if enabled in the future)</span>
+          </label>
 
-document.getElementById('apply-reload').addEventListener('click', () => {
-  const analytics = document.getElementById('opt-analytics').checked;
-  const ads = document.getElementById('opt-ads').checked;
-  applyChoices({ analytics, ads });
-  location.reload();
-});
-</script>
+          <div class="privacy-choice-actions">
+            <button type="button" id="save-privacy" class="button button-primary">
+              Save Preferences
+            </button>
+            <button type="button" id="apply-reload" class="button button-secondary">
+              Apply &amp; Reload
+            </button>
+          </div>
+
+          <p id="saved-msg" class="privacy-saved-msg" hidden>Saved.</p>
+          <p id="gpc-note" class="legal-note"></p>
+        </div>
+
+        <p class="legal-note">
+          These settings apply to this website only and depend on browser storage.
+          Clearing cookies, using private browsing, or switching browsers/devices
+          may reset your choices.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="partials/footer.html"></div>
+
+  <script src="./scripts/includes.js"></script>
+  <script>
+    const gpc = (navigator.globalPrivacyControl === true);
+    const gpcNote = document.getElementById('gpc-note');
+    const savedMsg = document.getElementById('saved-msg');
+
+    gpcNote.textContent = gpc
+      ? 'Your browser is sending a Global Privacy Control (GPC) signal. We treat this as an opt-out where applicable.'
+      : 'Your browser is not sending a Global Privacy Control (GPC) signal. You can still use the settings above.';
+
+    function loadChoices() {
+      const saved = JSON.parse(localStorage.getItem('us_privacy_optout') || 'null');
+      const initial = saved || (gpc
+        ? { analytics: false, ads: false }
+        : { analytics: true, ads: true });
+
+      document.getElementById('opt-analytics').checked = !!initial.analytics;
+      document.getElementById('opt-ads').checked = !!initial.ads;
+
+      window['ga-disable-G-V5FTYT8J50'] = !initial.analytics;
+    }
+
+    function applyChoices(choices) {
+      localStorage.setItem('us_privacy_optout', JSON.stringify(choices));
+      window['ga-disable-G-V5FTYT8J50'] = !choices.analytics;
+
+      if (!choices.ads) {
+        window.fbq = function () {};
+      }
+    }
+
+    document.getElementById('save-privacy').addEventListener('click', function () {
+      const choices = {
+        analytics: document.getElementById('opt-analytics').checked,
+        ads: document.getElementById('opt-ads').checked
+      };
+
+      applyChoices(choices);
+      savedMsg.hidden = false;
+
+      setTimeout(function () {
+        savedMsg.hidden = true;
+      }, 1500);
+    });
+
+    document.getElementById('apply-reload').addEventListener('click', function () {
+      const choices = {
+        analytics: document.getElementById('opt-analytics').checked,
+        ads: document.getElementById('opt-ads').checked
+      };
+
+      applyChoices(choices);
+      location.reload();
+    });
+
+    loadChoices();
+  </script>
+</body>
+</html>
