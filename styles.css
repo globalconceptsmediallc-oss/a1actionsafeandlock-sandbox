@@ -1373,3 +1373,142 @@ section,
   font-size: 0.95rem;
   opacity: 0.8;
 }
+.legal-page {
+  max-width: 900px;
+}
+
+.legal-page h2 {
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+.legal-page p,
+.legal-page li {
+  line-height: 1.7;
+}
+
+.legal-page ul {
+  margin: 0 0 18px 22px;
+  padding: 0;
+}
+
+.legal-page li + li {
+  margin-top: 8px;
+}
+
+.legal-note {
+  margin-top: 18px;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.privacy-choices-card {
+  max-width: 620px;
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.privacy-choice-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0 0 14px;
+  line-height: 1.5;
+}
+
+.privacy-choice-row input[type="checkbox"] {
+  margin-top: 3px;
+  flex: 0 0 auto;
+}
+
+.privacy-choice-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.privacy-saved-msg {
+  margin-top: 14px;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .privacy-choices-card {
+    padding: 20px;
+  }
+
+  .privacy-choice-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .privacy-choice-actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* ===== LEGAL PAGES (Privacy, Terms, Accessibility, etc.) ===== */
+
+.legal-page {
+  max-width: 900px;
+}
+
+.legal-page h2 {
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+.legal-page p,
+.legal-page li {
+  line-height: 1.7;
+}
+
+.legal-page ul {
+  margin: 0 0 18px 22px;
+  padding: 0;
+}
+
+.legal-page li + li {
+  margin-top: 8px;
+}
+
+.legal-note {
+  margin-top: 18px;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+/* ===== PRIVACY CHOICES CARD ===== */
+
+.privacy-choices-card {
+  max-width: 620px;
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.privacy-choice-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0 0 14px;
+  line-height: 1.5;
+}
+
+.privacy-choice-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.privacy-saved-msg {
+  margin-top: 14px;
+  font-weight: 700;
+}
