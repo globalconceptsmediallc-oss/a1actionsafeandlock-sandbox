@@ -1,0 +1,74 @@
+<!-- A-1: Your Privacy Choices (styled + working toggles) -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  .a1-legal{font-family:'Montserrat',Arial,sans-serif;max-width:900px;margin:0 auto;padding:24px 16px;line-height:1.65;color:#111}
+  .a1-legal h1{font-size:clamp(28px,4vw,40px);margin:0;color:#BE1E2D}
+  .a1-legal .updated{margin-top:14px;margin-bottom:18px;color:#555;font-size:.95rem}
+  .a1-legal h2{margin-top:28px;color:#BE1E2D;font-size:clamp(20px,2.6vw,26px)}
+  .a1-legal a{color:#BE1E2D;text-decoration:underline}
+  .prefs{max-width:560px;padding:16px;border:1px solid #eaeaea;border-radius:12px}
+  .prefs label{display:flex;align-items:center;gap:10px;margin:8px 0}
+  .prefs button{background:#f5bd1c;border:0;border-radius:9999px;padding:10px 18px;font-weight:700}
+  .prefs button+button{background:#000;color:#fff;margin-left:8px}
+  .a1-legal .note{font-size:12px;color:#666;margin-top:8px}
+</style>
+
+<section class="a1-legal">
+  <h1>Your Privacy Choices</h1>
+  <p class="updated"><em>Last updated: September 19, 2025</em></p>
+
+  <p>Use the controls below to manage non-essential cookies used on this site (for U.S. visitors). We honor <strong>Global Privacy Control (GPC)</strong> where applicable. Visitors in the EEA/UK do not receive non-essential cookies by default.</p>
+
+  <div id="choices" class="prefs">
+    <label><input type="checkbox" id="opt-analytics"> Allow Analytics (helps us improve the site)</label>
+    <label><input type="checkbox" id="opt-ads"> Allow Ads/Remarketing (if enabled in the future)</label>
+    <div style="margin-top:10px;">
+      <button id="save-privacy">Save Preferences</button>
+      <button id="apply-reload">Apply &amp; Reload</button>
+    </div>
+    <div id="saved-msg" style="margin-top:10px;color:green;display:none;">Saved.</div>
+    <p id="gpc-note" class="note"></p>
+  </div>
+
+  <p class="note">These controls apply to this website only and rely on your browser/local storage. Clearing cookies or using a different browser/device will reset your choices.</p>
+</section>
+
+<script>
+// Respect/Show GPC status
+const gpc = (navigator.globalPrivacyControl === true);
+document.getElementById('gpc-note').textContent = gpc
+  ? 'Your browser is sending a Global Privacy Control (GPC) signal. We treat this as an opt-out.'
+  : 'Your browser is not sending a GPC signal. You can still use the switches above.';
+
+// Load saved preferences or defaults
+function loadChoices() {
+  const saved = JSON.parse(localStorage.getItem('us_privacy_optout') || 'null');
+  const initial = saved || (gpc ? { analytics:false, ads:false } : { analytics:true, ads:true });
+  document.getElementById('opt-analytics').checked = !!initial.analytics;
+  document.getElementById('opt-ads').checked = !!initial.ads;
+  // Also set GA disable flag immediately on this page view:
+  window['ga-disable-G-V5FTYT8J50'] = !initial.analytics; // ← your GA4 ID
+}
+loadChoices();
+
+function applyChoices({ analytics, ads }) {
+  localStorage.setItem('us_privacy_optout', JSON.stringify({ analytics, ads }));
+  window['ga-disable-G-V5FTYT8J50'] = !analytics;
+  if (!ads) { window.fbq = function(){}; }
+}
+
+document.getElementById('save-privacy').addEventListener('click', () => {
+  const analytics = document.getElementById('opt-analytics').checked;
+  const ads = document.getElementById('opt-ads').checked;
+  applyChoices({ analytics, ads });
+  const msg = document.getElementById('saved-msg');
+  msg.style.display = 'block'; setTimeout(() => msg.style.display = 'none', 1500);
+});
+
+document.getElementById('apply-reload').addEventListener('click', () => {
+  const analytics = document.getElementById('opt-analytics').checked;
+  const ads = document.getElementById('opt-ads').checked;
+  applyChoices({ analytics, ads });
+  location.reload();
+});
+</script>
