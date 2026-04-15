@@ -1597,3 +1597,54 @@ section,
 .home-proof-cta .button {
   font-weight: 600;
 }
+/* ===== FOOTER SOCIAL RESET / FIX ===== */
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 10px;
+}
+
+.footer-social a.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 10px;
+  background: #f5bd1c;
+  border: none;
+  text-decoration: none;
+  overflow: visible;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.footer-social a.social-icon:hover,
+.footer-social a.social-icon:focus {
+  transform: translateY(-2px);
+  background: #be1e2d;
+  text-decoration: none;
+}
+
+.footer-social a.social-icon img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 0;
+  clip-path: none;
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.footer-social a.social-icon:hover img,
+.footer-social a.social-icon:focus img {
+  filter: brightness(0) invert(1);
+}
