@@ -986,6 +986,13 @@ section,
   opacity: 0.9;
 }
 
+/* ===== FOOTER COPY OVERRIDE ===== */
+.footer-copy {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
 .site-footer a {
   color: #f5bd1c;
   text-decoration: none;
