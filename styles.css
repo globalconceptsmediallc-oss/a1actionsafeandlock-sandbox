@@ -1457,8 +1457,8 @@ section,
 
 .home-proof-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
-  gap: 36px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 28px;
   align-items: start;
 }
 
