@@ -1577,3 +1577,16 @@ section,
     grid-template-columns: 1fr;
   }
 }
+.home-proof-cta .button:not(.button-primary) {
+  background: #f5bd1c;
+  color: #111;
+  border: none;
+}
+
+.home-proof-cta .button:not(.button-primary):hover {
+  background: #e0a800;
+  color: #111;
+}
+.home-proof-cta .button {
+  font-weight: 600;
+}
