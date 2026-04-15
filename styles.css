@@ -1648,3 +1648,123 @@ section,
 .footer-social a.social-icon:focus img {
   filter: brightness(0) invert(1);
 }
+/* ===== FINAL FOOTER CLEANUP ===== */
+.site-footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.footer-copy,
+.footer-intro {
+  max-width: 720px;
+  margin: 0 auto 12px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.footer-intro {
+  margin-bottom: 12px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px 20px;
+  margin-bottom: 8px;
+}
+
+.footer-cta {
+  margin: 18px 0 6px;
+}
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 10px;
+}
+
+.footer-social a.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 10px;
+  background: #f5bd1c;
+  border: none;
+  text-decoration: none;
+  overflow: visible;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.footer-social a.social-icon:hover,
+.footer-social a.social-icon:focus {
+  transform: translateY(-2px);
+  background: #be1e2d;
+  text-decoration: none;
+}
+
+.footer-social a.social-icon img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 0 !important;
+  clip-path: none !important;
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.footer-social a.social-icon:hover img,
+.footer-social a.social-icon:focus img {
+  filter: brightness(0) invert(1);
+}
+
+.footer-copy {
+  margin-top: 6px;
+  padding-top: 10px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.3px;
+  opacity: 1;
+}
+
+.footer-copy span {
+  opacity: 0.6;
+  margin: 0 6px;
+}
+
+.footer-legal-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 18px;
+  margin-top: 10px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.footer-legal-nav a {
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+}
+
+.footer-legal-nav a:hover,
+.footer-legal-nav a:focus {
+  color: #f5bd1c;
+  text-decoration: underline;
+}
