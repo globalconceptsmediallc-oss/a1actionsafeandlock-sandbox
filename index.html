@@ -173,8 +173,8 @@
   gap: 10px;
   padding: 12px 14px;
 
-  background: #111; /* black */
-  color: #f5bd1c; /* gold */
+  background: #111;
+  color: #f5bd1c;
 
   border-radius: 12px;
   border: 1px solid rgba(245, 189, 28, 0.35);
@@ -183,6 +183,15 @@
 
   font-weight: 600;
   line-height: 1.4;
+
+  /* ADD THIS LINE */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ADD THIS BLOCK RIGHT UNDER IT */
+.home-proof-points span:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
             <div class="home-proof-cta">
