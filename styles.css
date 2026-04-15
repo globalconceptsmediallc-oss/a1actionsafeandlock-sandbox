@@ -1510,10 +1510,11 @@ section,
 
 .home-proof-work {
   min-width: 0;
+  margin-top: 6px;
 }
 
 .home-proof-heading {
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .home-proof-heading h3 {
