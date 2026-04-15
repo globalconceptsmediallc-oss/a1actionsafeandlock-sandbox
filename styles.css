@@ -1496,9 +1496,8 @@ section,
 
 .home-proof-points span::before {
   content: "✓";
-  color: #be1e2d;
+  color: #f5bd1c;
   font-weight: 700;
-  flex: 0 0 auto;
 }
 
 .home-proof-cta {
