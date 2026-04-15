@@ -1448,6 +1448,11 @@ section,
 #about {
   border-top: 1px solid #e5ded3;
   border-bottom: 1px solid #e5ded3;
+
+  /* NEW ↓ */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  position: relative;
+  z-index: 1;
 }
 
 .home-proof-grid {
