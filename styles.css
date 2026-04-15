@@ -1026,7 +1026,15 @@ section,
 }
 
 .footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
   margin-bottom: 10px;
+}
+/* tighten spacing between social + copyright */
+.footer-copy {
+  margin-top: 6px;
 }
 
 .footer-social a.social-icon {
