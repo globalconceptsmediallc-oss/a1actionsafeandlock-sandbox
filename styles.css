@@ -1381,25 +1381,6 @@ section,
     gap: 10px 14px;
   }
 }
-.footer-legal-nav {
-  margin-top: 26px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  font-size: 0.85rem;
-  opacity: 0.75;
-}
-
-.footer-legal-nav a {
-  color: rgba(255, 255, 255, 0.82);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.footer-legal-nav a:hover,
-.footer-legal-nav a:focus {
-  color: #f5bd1c;
-  text-decoration: underline;
-}
 
 /* ===== LEGAL PAGES ===== */
 
