@@ -1,6 +1,23 @@
+// ===== GLOBAL SALE TOGGLE =====
+const SALE_ACTIVE = true;
+
+// ===== SALE BAR CLOSE FUNCTION (GLOBAL) =====
+function closeSaleBar() {
+  const bar = document.getElementById('saleTopbar');
+  if (bar) {
+    bar.style.transition = 'opacity 0.3s ease';
+    bar.style.opacity = '0';
+    setTimeout(() => {
+      bar.style.display = 'none';
+    }, 300);
+  }
+  localStorage.setItem('saleBarClosed', 'true');
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
   const includeElements = document.querySelectorAll("[data-include]");
 
+  // ===== LOAD PARTIALS =====
   for (const el of includeElements) {
     const file = el.getAttribute("data-include");
     if (!file) continue;
@@ -17,6 +34,25 @@ document.addEventListener("DOMContentLoaded", async () => {
     } catch (error) {
       console.error(error);
       el.innerHTML = `<!-- Failed to load ${file} -->`;
+    }
+  }
+
+  // ===== SALE BAR CONTROL =====
+  const saleBar = document.getElementById('saleTopbar');
+
+  if (saleBar) {
+    if (!SALE_ACTIVE) {
+      saleBar.style.display = 'none';
+    } else {
+      // Hide if user already closed it
+      if (localStorage.getItem('saleBarClosed') === 'true') {
+        saleBar.style.display = 'none';
+      }
+
+      // Hide on sale page (prevents redundancy)
+      if (window.location.href.includes("spring-cleaning-sale")) {
+        saleBar.style.display = 'none';
+      }
     }
   }
 
@@ -69,4 +105,5 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     }
   });
+
 });
