@@ -1617,3 +1617,118 @@ section,
 .home-proof-cta .button {
   font-weight: 600;
 }
+
+/* ===== A-1 SALE BANNER ===== */
+.a1-sale-banner {
+  background: #fffaf2;
+  border-top: 1px solid #e5ded3;
+  border-bottom: 1px solid #e5ded3;
+  padding: 28px 0;
+}
+
+.sale-banner-link {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.sale-banner-link:hover {
+  text-decoration: none;
+}
+
+.sale-banner-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.sale-banner-copy {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sale-banner-copy h2 {
+  margin: 0 0 12px;
+}
+
+.sale-banner-copy p {
+  margin: 0 0 14px;
+}
+
+.sale-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 18px 0 12px;
+}
+
+.sale-banner-note {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  color: #5a534a;
+  font-weight: 600;
+}
+
+/* ===== STICKY SALE BAR ===== */
+.sale-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  background: #be1e2d;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sale-topbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 18px;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.sale-topbar-text {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.sale-topbar .button {
+  min-height: 40px;
+  padding: 10px 16px;
+  background: #f5bd1c;
+  color: #111;
+}
+
+.sale-topbar .button:hover {
+  background: #dfaa15;
+  color: #111;
+}
+
+@media (max-width: 768px) {
+  .sale-banner-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sale-banner-actions .button {
+    width: 100%;
+  }
+
+  .sale-topbar .container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .sale-topbar-text {
+    font-size: 0.92rem;
+  }
+}
