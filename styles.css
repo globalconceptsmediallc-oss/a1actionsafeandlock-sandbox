@@ -1793,3 +1793,34 @@ section,
   min-height: 34px;
   padding: 6px 12px;
 }
+
+/* ===== A-1 SAFE PROMO (POST-SALE) ===== */
+.a1-safe-promo {
+  background: #f5f2ec;
+  border-top: 1px solid #e5ded3;
+  border-bottom: 1px solid #e5ded3;
+}
+
+.safe-promo-copy {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.safe-promo-copy h2 {
+  margin-bottom: 12px;
+}
+
+.safe-promo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 18px 0 12px;
+}
+
+.safe-promo-note {
+  font-size: 0.95rem;
+  color: #5a534a;
+  margin-bottom: 0;
+}
