@@ -3,15 +3,15 @@ const SALE_ACTIVE = true;
 
 // ===== SALE BAR CLOSE FUNCTION (GLOBAL) =====
 function closeSaleBar() {
-  const bar = document.getElementById('saleTopbar');
+  const bar = document.getElementById("saleTopbar");
   if (bar) {
-    bar.style.transition = 'opacity 0.3s ease';
-    bar.style.opacity = '0';
+    bar.style.transition = "opacity 0.3s ease";
+    bar.style.opacity = "0";
     setTimeout(() => {
-      bar.style.display = 'none';
+      bar.style.display = "none";
     }, 300);
   }
-  localStorage.setItem('saleBarClosed', 'true');
+  localStorage.setItem("saleBarClosed", "true");
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -38,21 +38,28 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   // ===== SALE BAR CONTROL =====
-  const saleBar = document.getElementById('saleTopbar');
+  const saleBar = document.getElementById("saleTopbar");
 
   if (saleBar) {
     if (!SALE_ACTIVE) {
-      saleBar.style.display = 'none';
+      saleBar.style.display = "none";
     } else {
-      // Hide if user already closed it
-      if (localStorage.getItem('saleBarClosed') === 'true') {
-        saleBar.style.display = 'none';
+      if (localStorage.getItem("saleBarClosed") === "true") {
+        saleBar.style.display = "none";
       }
 
-      // Hide on sale page (prevents redundancy)
       if (window.location.href.includes("spring-cleaning-sale")) {
-        saleBar.style.display = 'none';
+        saleBar.style.display = "none";
       }
+
+      // ===== SALE BAR SHRINK ON SCROLL =====
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          saleBar.classList.add("shrink");
+        } else {
+          saleBar.classList.remove("shrink");
+        }
+      });
     }
   }
 
@@ -69,14 +76,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       const isOpen = dropdown.classList.contains("open");
 
-      // Close all dropdowns first
       dropdowns.forEach((d) => {
         d.classList.remove("open");
         const t = d.querySelector(".nav-dropdown-toggle");
         if (t) t.setAttribute("aria-expanded", "false");
       });
 
-      // Open clicked one if it was closed
       if (!isOpen) {
         dropdown.classList.add("open");
         toggle.setAttribute("aria-expanded", "true");
@@ -105,5 +110,4 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     }
   });
-  
 });
