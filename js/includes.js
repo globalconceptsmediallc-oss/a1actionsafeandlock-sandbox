@@ -105,18 +105,5 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     }
   });
-
-  /* ===== SALE BAR SHRINK ON SCROLL ===== */
-const saleBar = document.getElementById('saleTopbar');
-
-if (saleBar) {
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      saleBar.classList.add('shrink');
-    } else {
-      saleBar.classList.remove('shrink');
-    }
-  });
-}
   
 });
