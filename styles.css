@@ -1761,3 +1761,35 @@ section,
 .sale-topbar-close:hover {
   opacity: 1;
 }
+
+/* ===== SALE BAR SHRINK ON SCROLL ===== */
+.sale-topbar {
+  transition: all 0.25s ease;
+}
+
+.sale-topbar .container {
+  transition: all 0.25s ease;
+}
+
+.sale-topbar-text {
+  transition: all 0.25s ease;
+}
+
+.sale-topbar.shrink {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.sale-topbar.shrink .container {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.sale-topbar.shrink .sale-topbar-text {
+  font-size: 0.85rem;
+}
+
+.sale-topbar.shrink .button {
+  min-height: 34px;
+  padding: 6px 12px;
+}
