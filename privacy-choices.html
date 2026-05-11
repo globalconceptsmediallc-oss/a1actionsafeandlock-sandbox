@@ -1,39 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Your Privacy Choices | A-1 Action Safe &amp; Lock</title>
+
   <meta
     name="description"
     content="Manage your privacy choices for A-1 Action Safe &amp; Lock, including analytics and advertising preferences."
   />
+
   <meta name="robots" content="index, follow" />
 
-  <!-- STYLES -->
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="canonical" href="https://www.a1actionsafeandlock.com/privacy-choices" />
 
-  <!-- GLOBAL CANONICAL SYSTEM -->
-  <script src="./js/seo-canonical.js"></script>
+  <link rel="stylesheet" href="/styles.css" />
+
+  <meta property="og:title" content="Your Privacy Choices | A-1 Action Safe &amp; Lock" />
+  <meta
+    property="og:description"
+    content="Manage non-essential cookies, analytics, and advertising preferences for A-1 Action Safe &amp; Lock."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.a1actionsafeandlock.com/privacy-choices" />
+  <meta property="og:image" content="https://www.a1actionsafeandlock.com/images/logo.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Your Privacy Choices | A-1 Action Safe &amp; Lock" />
+  <meta
+    name="twitter:description"
+    content="Manage analytics and advertising privacy preferences for this website."
+  />
+  <meta name="twitter:image" content="https://www.a1actionsafeandlock.com/images/logo.png" />
+
+  <script src="/js/seo-canonical.js"></script>
 </head>
+
 <body>
 
-  <div data-include="partials/header.html"></div>
+  <div data-include="/partials/header.html"></div>
 
   <main>
     <section class="section">
       <div class="container legal-page">
         <div class="section-heading">
           <p class="eyebrow">Legal</p>
+
           <h1>Your Privacy Choices</h1>
+
           <p class="section-intro">
             Use the options below to manage non-essential cookies and tracking
             preferences for this website.
           </p>
         </div>
 
-        <p><strong>Last updated:</strong> April 2026</p>
+        <p>
+          <strong>Last updated:</strong> April 2026
+        </p>
 
         <p>
           This page allows you to manage certain non-essential privacy settings
@@ -44,8 +68,8 @@
         <p>
           Where applicable, we honor browser-based privacy preference signals such
           as Global Privacy Control (GPC). You can also review our
-          <a href="./privacy-policy.html">Privacy Policy</a> for more information
-          about how website information may be collected and used.
+          <a href="/privacy-policy">Privacy Policy</a>
+          for more information about how website information may be collected and used.
         </p>
 
         <div id="choices" class="privacy-choices-card">
@@ -63,12 +87,16 @@
             <button type="button" id="save-privacy" class="button button-primary">
               Save Preferences
             </button>
+
             <button type="button" id="apply-reload" class="button button-secondary">
               Apply &amp; Reload
             </button>
           </div>
 
-          <p id="saved-msg" class="privacy-saved-msg" hidden>Saved.</p>
+          <p id="saved-msg" class="privacy-saved-msg" hidden>
+            Saved.
+          </p>
+
           <p id="gpc-note" class="legal-note"></p>
         </div>
 
@@ -81,43 +109,45 @@
     </section>
   </main>
 
-  <div data-include="partials/footer.html"></div>
+  <div data-include="/partials/footer.html"></div>
 
-  <script src="./js/includes.js"></script>
+  <script src="/js/includes.js"></script>
+
   <script>
-    const gpc = (navigator.globalPrivacyControl === true);
-    const gpcNote = document.getElementById('gpc-note');
-    const savedMsg = document.getElementById('saved-msg');
+    const gpc = navigator.globalPrivacyControl === true;
+    const gpcNote = document.getElementById("gpc-note");
+    const savedMsg = document.getElementById("saved-msg");
 
     gpcNote.textContent = gpc
-      ? 'Your browser is sending a Global Privacy Control (GPC) signal. We treat this as an opt-out where applicable.'
-      : 'Your browser is not sending a Global Privacy Control (GPC) signal. You can still use the settings above.';
+      ? "Your browser is sending a Global Privacy Control (GPC) signal. We treat this as an opt-out where applicable."
+      : "Your browser is not sending a Global Privacy Control (GPC) signal. You can still use the settings above.";
 
     function loadChoices() {
-      const saved = JSON.parse(localStorage.getItem('us_privacy_optout') || 'null');
+      const saved = JSON.parse(localStorage.getItem("us_privacy_optout") || "null");
+
       const initial = saved || (gpc
         ? { analytics: false, ads: false }
         : { analytics: true, ads: true });
 
-      document.getElementById('opt-analytics').checked = !!initial.analytics;
-      document.getElementById('opt-ads').checked = !!initial.ads;
+      document.getElementById("opt-analytics").checked = !!initial.analytics;
+      document.getElementById("opt-ads").checked = !!initial.ads;
 
-      window['ga-disable-G-V5FTYT8J50'] = !initial.analytics;
+      window["ga-disable-G-V5FTYT8J50"] = !initial.analytics;
     }
 
     function applyChoices(choices) {
-      localStorage.setItem('us_privacy_optout', JSON.stringify(choices));
-      window['ga-disable-G-V5FTYT8J50'] = !choices.analytics;
+      localStorage.setItem("us_privacy_optout", JSON.stringify(choices));
+      window["ga-disable-G-V5FTYT8J50"] = !choices.analytics;
 
       if (!choices.ads) {
         window.fbq = function () {};
       }
     }
 
-    document.getElementById('save-privacy').addEventListener('click', function () {
+    document.getElementById("save-privacy").addEventListener("click", function () {
       const choices = {
-        analytics: document.getElementById('opt-analytics').checked,
-        ads: document.getElementById('opt-ads').checked
+        analytics: document.getElementById("opt-analytics").checked,
+        ads: document.getElementById("opt-ads").checked
       };
 
       applyChoices(choices);
@@ -128,10 +158,10 @@
       }, 1500);
     });
 
-    document.getElementById('apply-reload').addEventListener('click', function () {
+    document.getElementById("apply-reload").addEventListener("click", function () {
       const choices = {
-        analytics: document.getElementById('opt-analytics').checked,
-        ads: document.getElementById('opt-ads').checked
+        analytics: document.getElementById("opt-analytics").checked,
+        ads: document.getElementById("opt-ads").checked
       };
 
       applyChoices(choices);
@@ -140,5 +170,6 @@
 
     loadChoices();
   </script>
+
 </body>
 </html>
