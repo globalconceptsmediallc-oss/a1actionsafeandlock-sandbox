@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://a1actionsafeandlock.com/sitemap.xml
+Sitemap: https://www.a1actionsafeandlock.com/sitemap.xml
