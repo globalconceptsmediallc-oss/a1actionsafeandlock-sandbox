@@ -1,42 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url><loc>https://a1actionsafeandlock.com/</loc></url>
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/</loc>
+  </url>
 
-  <url><loc>https://a1actionsafeandlock.com/services</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/service-area</loc></url>
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/services</loc>
+  </url>
 
-  <url><loc>https://a1actionsafeandlock.com/emergency-locksmith-services</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/residential-locksmith-services</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/commercial-locksmith-services</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/automotive-locksmith-services</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/safe-services</loc></url>
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/service-area</loc>
+  </url>
 
-  <url><loc>https://a1actionsafeandlock.com/gun-safes-melbourne-fl</loc></url>
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/emergency-locksmith-services</loc>
+  </url>
 
-  <url><loc>https://a1actionsafeandlock.com/cape-canaveral-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/cocoa-beach-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/cocoa-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/cocoa-village-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/grant-valkaria-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/indialantic-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/indian-harbour-beach-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/malabar-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/melbourne-beach-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/melbourne-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/merritt-island-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/micco-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/mims-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/palm-bay-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/port-st-john-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/rockledge-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/satellite-beach-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/scottsmoor-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/sebastian-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/suntree-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/titusville-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/vero-beach-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/viera-locksmith</loc></url>
-  <url><loc>https://a1actionsafeandlock.com/west-melbourne-locksmith</loc></url>
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/residential-locksmith-services</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/commercial-locksmith-services</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/automotive-locksmith-services</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/safe-services</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/gun-safes-melbourne-fl</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/cape-canaveral-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/cocoa-beach-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/cocoa-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/cocoa-village-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/grant-valkaria-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/indialantic-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/indian-harbour-beach-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/malabar-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/melbourne-beach-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/melbourne-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/merritt-island-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/micco-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/mims-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/palm-bay-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/port-st-john-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/rockledge-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/satellite-beach-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/scottsmoor-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/sebastian-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/suntree-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/titusville-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/vero-beach-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/viera-locksmith</loc>
+  </url>
+
+  <url>
+    <loc>https://www.a1actionsafeandlock.com/west-melbourne-locksmith</loc>
+  </url>
 
 </urlset>
