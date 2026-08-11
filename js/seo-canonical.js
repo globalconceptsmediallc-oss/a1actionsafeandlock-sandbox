@@ -1,19 +1,18 @@
 /* =========================================================
    A1 Action Safe & Lock
    File: js/seo-canonical.js
-   Version: 1.1.0
+   Version: 1.2.0
    Status: Production Road-Test Candidate
    Purpose:
    Maintain canonical URL normalization and apply verified shared
    business identity fields to existing LocalBusiness/Locksmith JSON-LD.
 
    Change Notes:
-   - Preserves existing canonical URL normalization behavior.
-   - Adds the verified A1 physical address to existing Locksmith or
-     LocalBusiness structured data only when address is missing.
-   - Preserves each page's existing URL, image, description, areaServed,
-     telephone, and other page-specific schema fields.
-   - Supports direct JSON-LD objects, arrays, and @graph structures.
+   - Preserves v1.1.0 canonical URL normalization behavior.
+   - Preserves the verified A1 business address normalization.
+   - Expands JSON-LD traversal so nested Locksmith/LocalBusiness entities,
+     including Service.provider, receive the verified address when missing.
+   - Preserves each page's existing schema structure and page-specific fields.
    - Does not create a second LocalBusiness/Locksmith entity.
    ========================================================= */
 
@@ -33,7 +32,6 @@
 
   function normalizeCanonical() {
     var path = window.location.pathname;
-
     path = path.replace(/\/index\.html$/i, "/");
 
     if (path !== "/" && path.endsWith(".html")) {
@@ -89,13 +87,19 @@
       changed = true;
     }
 
-    if (Array.isArray(node["@graph"])) {
-      node["@graph"].forEach(function (item) {
-        if (applyVerifiedAddress(item)) {
+    Object.keys(node).forEach(function (key) {
+      if (key === "address") {
+        return;
+      }
+
+      var value = node[key];
+
+      if (value && typeof value === "object") {
+        if (applyVerifiedAddress(value)) {
           changed = true;
         }
-      });
-    }
+      }
+    });
 
     return changed;
   }
